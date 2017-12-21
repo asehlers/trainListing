@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Train Schedule</title>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Bootstrap links -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- Firebase link -->
+	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+
+</head>
+<body>
+	<div class="container">
+
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="jumbotron">
+  				<h1>Train Schedules</h1>
+  				<p>There is no ghost train</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="panel panel-default">
+
+  				<div class="panel-heading">
+    				<h3 class="panel-title">Current Train Schedule</h3>
+  				</div>
+
+  				<div class="panel-body">
+						<table id="train-display" class="table table-bordered">
+							<tr>
+								<th>Train Name</th>
+								<th>Destination</th>
+								<th>Frequency (min)</th>
+								<th>Next Arrival</th>
+								<th>Minutes Away</th>
+							</tr>
+						</table>
+  				</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="panel panel-default">
+  				<div class="panel-heading">
+    				<h3 class="panel-title">Add a Train</h3>
+  				</div>
+  				<div class="panel-body">
+    				<section>Train Name</section>
+    				<input type="text" id="nameInput">
+    				<section>Destination</section>
+    				<input type="text" id="destinationInput">
+    				<section>Train Start Time (HH:mm military time)</section>
+    				<input type="text" id="startTimeInput">
+    				<section>Train Frequency</section>
+    				<input type="text" id="frequencyInput">
+    				<br><br>
+    				<input id="addTrain" type="submit" value="Submit">
+  				</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	<script type="text/javascript" src="javascript.js"></script>
+</body>
+</html>
